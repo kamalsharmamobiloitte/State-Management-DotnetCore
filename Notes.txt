@@ -1,0 +1,30 @@
+﻿State can be stored using several approaches. Each approach is described later in this topic.
+
+1) Cookies	
+Cookies are often used for personalization, where content is customized for a known user. 
+The user is only identified and not authenticated in most cases.
+The cookie can store the user's name, account name, or unique user ID (such as a GUID). 
+You can then use the cookie
+to access the user's personalized settings, such as their preferred website background color.
+
+
+
+2)Session state	
+ASP.NET Core maintains session state by providing a cookie to the client that contains a session ID,
+which is sent to the app with each request. 
+The app uses the session ID to fetch the session data.
+Because the session cookie is specific to the browser, 
+sessions aren't shared across browsers.
+If a cookie is received for an expired session,
+a new session is created that uses the same session cookie.
+ Session state cookies aren't marked essential by default
+
+3)TempData	 
+Query strings	 
+Hidden fields	 
+HttpContext.Items	 
+Cache	 
+Dependency Injection	
+
+Cached data isn't associated with a specific request, user, or session. 
+Be careful not to cache user-specific data that may be retrieved by other users' requests.

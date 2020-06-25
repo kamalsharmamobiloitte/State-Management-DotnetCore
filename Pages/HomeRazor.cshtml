@@ -1,0 +1,7 @@
+﻿@page
+@using System.Text
+@using Microsoft.AspNetCore.Http
+@model StateManageProject.Pages.HomeRazorModel
+@Encoding.UTF8.GetString(HttpContext.Session.Get("razorKey"))
+@TempData["usekey"]
+@TempData["StronglyTempData"]   
